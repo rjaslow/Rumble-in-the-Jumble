@@ -18,7 +18,7 @@ def anagram(b,c):
       return 1 
 
 def main():
-    debug = 1
+    debug = 0
     jumble_list = []
 
     base_word = input("Enter a word: ")
