@@ -21,13 +21,13 @@ def main():
     debug = 0
     jumble_list = []
 
-    base_word = input("Enter a word: ")
+    base_word = input("Enter a word: ").lower()
     base_hist = jumble(base_word)
 
     file_name = input("Enter a text file to compare: ")   
     words_file = open(file_name,'r').read().splitlines()
     for case_word in words_file:
-        case_hist = jumble(case_word)
+        case_hist = jumble(case_word.lower())
         #checks if case_word is a jumble of base_word and adds it to list if it is
         if (len(base_word)>=len(case_word)) and anagram(base_hist,case_hist):
             jumble_list.append(case_word)
